@@ -8,13 +8,13 @@ using TaskSystem.DAL.Session;
 using TaskSystem.Model;
 using TaskSystem.Model.IRepository;
 
-namespace TaskSystem.BLL.IBusiness
+namespace TaskSystem.BLL
 {
    public abstract class BaseService<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
     {
        public IBaseDAL<TEntity,TPrimaryKey> CurretDAL { get; set; }
-       public IDbSession DbSession { get { return DbSessionFactory.GetCurrentDbSession(); } }
-       public abstract void SetCurrentDal();//抽象方法，让子类来实现
+       public IDbSession DbSession=DbSessionFactory.GetCurrentDbSession();
+        public abstract void SetCurrentDal();//抽象方法，让子类来实现
 
         #region 构造方法
        public BaseService()

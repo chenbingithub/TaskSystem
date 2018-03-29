@@ -10,13 +10,15 @@ namespace TaskSystem.DAL.Session
 
     public class DbSession : IDbSession
     {
-        public IUserInfoDAL UserInfoDAL
+        public IUserInfoDAL UserInfoDal
         {
             get
             {
                 return StaticDALFactory.GetUserInfoDAL();
             }
         }
+
+       
 
         /// <summary>
         /// 向数据库提交的方法

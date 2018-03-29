@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -23,15 +24,12 @@ namespace TaskSystem.DAL
     public partial class TaskSystemDbContext: DbContext
     {
         public TaskSystemDbContext()
-            : base("name=DataModelContainer")
+            : base("ef")
         {
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new System.Data.Entity.Infrastructure.UnintentionalCodeFirstException();
-        }
-
+        
+        
         public DbSet<TaskSystem.Model.UserInfo> UserInfos { get; set; }
        
     }

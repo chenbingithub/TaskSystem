@@ -8,6 +8,13 @@ namespace TaskSystem.DAL.Session
 {
     public class DbSessionFactory
     {
+        //public static IDbSession db = null;
+
+        //static DbSessionFactory()
+        //{
+        //    db = new DbSession();
+        //}
+
         public static IDbSession GetCurrentDbSession()
         {
             IDbSession db = CallContext.GetData("DbSession") as IDbSession;

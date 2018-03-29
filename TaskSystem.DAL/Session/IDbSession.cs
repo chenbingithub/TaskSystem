@@ -10,7 +10,7 @@ namespace TaskSystem.DAL.Session
     
     public interface IDbSession
     {
-        IUserInfoDAL UserInfoDAL { get; }
+        IUserInfoDAL UserInfoDal { get; }
         int SaveChanges();
     }
 }

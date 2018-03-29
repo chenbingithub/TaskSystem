@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskSystem.Common", "TaskSystem.Common\TaskSystem.Common.csproj", "{A1927BB1-F08F-478A-A3A7-1809D5531E71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskSystem.WebUI", "TaskSystem.WebUI\TaskSystem.WebUI.csproj", "{E56BA4A1-6C86-427B-A62E-2367DC059401}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7C1D1EC-024B-4C25-B0E0-CD96B9FEB345} = {F7C1D1EC-024B-4C25-B0E0-CD96B9FEB345}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskSystem.Service", "TaskSystem.Service\TaskSystem.Service.csproj", "{F7C1D1EC-024B-4C25-B0E0-CD96B9FEB345}"
 EndProject
